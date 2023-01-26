@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    ports:
+      - "3456:3000"
+  nginx1:
+    build: ./nginx1
+    ports:
+      - "8080:80"
+  nginx2:
+    build: ./nginx2
+    ports:
+      - "8081:80"
