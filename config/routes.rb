@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get '/home', to: 'home#show'
+  resources :posts, only: [:new, :create]
 end
