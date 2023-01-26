@@ -1,24 +1,12 @@
-# README
+# Demo app to demonstrate bad redirection behind multiple reverse proxies
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## How to run
 
-Things you may want to cover:
+```
+docker compose up
+```
 
-* Ruby version
+Then visit the following pages:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `http://localhost:8080/home` -- incorrectly redirects to `http://nginx2/`
+- `http://localhost:8081/home` -- correctly redirects to `http://localhost:8081/`
